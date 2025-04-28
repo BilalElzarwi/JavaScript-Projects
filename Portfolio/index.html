@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>- Developer Portfolio</title>
+    <link rel="shortcut icon" type="image/png" href="assets/icons/coding_icon.png" />
+    <link rel="stylesheet" type="text/css" href="css/portfolio_style.css" />
+</head>
+<body class="SiteBody"> <nav class="TopNav"> <a class="nav-item active" href="#HeroHome">Home</a> <a class="nav-item" href="#Showcase">Slideshow</a> <a class="nav-item" href="#AboutInfo">About</a> <a class="nav-item" href="#GitHubLink">GitHub</a> <a onclick="displayContactPopup()" ondblclick="hideContactPopup()" class="nav-item contact-action">Contact</a> </nav>
+
+    <section id="HeroHome"> <video autoplay muted loop id="BackgroundLoopVideo"> <source src="assets/video/Typing.mp4" type="video/mp4" /> Your browser does not support HTML5 video.
+        </video>
+    </section>
+
+    <div class="HeroOverlayText"> <h1 class="main-title">'s Portfolio</h1> <strong>
+            <p class="center-align quote-text"> <q>The computer programmer is a creator of universes for which he
+                    alone is the lawgiver. <br />No playwright, no stage director, no
+                    emperor, however powerful, has ever exercised such absolute
+                    authority to arrange a stage or <br />field of battle and to command
+                    such unswervingly dutiful actors or troops.
+                </q>
+                <br />
+                -Joseph Weizenbaum<br />
+                <br />
+                 My name is ____. Welcome to my portfolio website. On it, I will tell
+                you about my background and experience.
+                <br /><br />Thank you for stopping by and enjoy!
+            </p>
+        </strong>
+    </div>
+
+    <section id="Showcase"> <div class="SlideshowBackground"> <div class="SlideshowFrame"> <div class="SlideContent fade-transition" style="display: block;"> <img class="slide-image" src="assets/images/Picture_of_You.jpg" alt=""/> <div class="slide-caption">I'm available to assist you on your project!</div> </div>
+                <div class="SlideContent fade-transition" style="display: none;">
+                    <img class="slide-image" src="assets/images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, JS Logos"/>
+                    <div class="slide-caption">
+                        I am a full-stack software developer,<br />
+                        trained in:<br />HTML, CSS, JavaScript,
+                    </div>
+                </div>
+                <div class="SlideContent fade-transition" style="display: none;">
+                    <img class="slide-image" src="assets/images/Python.png" alt="Python Logo"/>
+                    <div class="slide-caption">the popular programming language Python,</div>
+                </div>
+                <div class="SlideContent fade-transition" style="display: none;">
+                    <img class="slide-image" src="assets/images/C_Sharp_and_Dot_NET.png" alt="C# and .NET Logos"/>
+                    <div class="slide-caption">C#, .NET Framework, ASP.NET, MVC,</div>
+                </div>
+                <div class="SlideContent fade-transition" style="display: none;">
+                    <img class="slide-image" src="assets/images/SQL_and_Database.jpg" alt="SQL Database icon"/>
+                    <div class="slide-caption">back end development, databases and SQL.</div>
+                </div>
+                <div class="SlideContent fade-transition" style="display: none;">
+                    <img class="slide-image" src="assets/images/Coding_1.jpg" alt="Coding screen example"/>
+                    <div class="slide-caption">
+                        <a class="main-title contact-action" onclick="displayContactPopup()">Contact me now!</a>
+                    </div>
+                </div>
+                <a class="PrevControl" onclick="advanceSlides(-1)">&#10094;</a> <a class="NextControl" onclick="advanceSlides(1)">&#10095;</a> </div>
+            <br />
+            <div style="text-align: center;">
+                 <span class="indicator-dot active" onclick="gotoSlide(1)"></span> <span class="indicator-dot" onclick="gotoSlide(2)"></span>
+                <span class="indicator-dot" onclick="gotoSlide(3)"></span>
+                <span class="indicator-dot" onclick="gotoSlide(4)"></span>
+                <span class="indicator-dot" onclick="gotoSlide(5)"></span>
+                <span class="indicator-dot" onclick="gotoSlide(6)"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="InfoRow" id="AboutInfo"> <div class="ColumnFifty ImageCol"> <img src="assets/images/Development.jpg" alt="Laptop on desk" />
+        </div>
+        <div class="ColumnFifty TextCol"> <h1>About</h1>
+             <p>
+                I am a software developer who loves to code! As a father of two, I
+                enjoy time with my family and traveling.
+                <br /><br />
+                I am a graduate of
+                <a href="https://www.learncodinganywhere.com" target="_blank" rel="noopener noreferrer">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the
+                following web and programming languages: HTML, CSS, JavaScript, SQL,
+                Python, C# and more.
+                <br /><br />
+                I am a full-stack developer and would love to work with you on
+                your project. <a onclick="displayContactPopup()" class="contact-action">Contact</a> me below!
+            </p>
+        </div>
+    </section>
+
+    <section class="InfoRow" id="GitHubLink"> <div class="ColumnFifty TextCol">
+            <h1>GitHub</h1>
+             <p>
+                You can view my coding projects on my GitHub profile here:
+            </p>
+            <p class="center-align">
+                <a href="" target="_blank" rel="noopener noreferrer">My GitHub Profile</a>
+            </p>
+        </div>
+        <div class="ColumnFifty ImageCol">
+            <a href="" target="_blank" rel="noopener noreferrer">
+                 <img src="assets/images/GitHub.png" alt="GitHub Logo"/>
+            </a>
+        </div>
+    </section>
+
+    <section id="ContactTriggerSection"> <button onclick="displayContactPopup()" class="OpenContactButton">CONTACT</button> <div class="PopupFormWrapper" id="ContactFormPopup" ondblclick="hideContactPopup()" style="display: none;"> <form action="https://formspree.io/f/your_form_id" method="POST" class="PopupFormContainer"> <h1>Contact</h1>
+                <label for="form_name"><b>Name</b></label>
+                <input type="text" placeholder="Type your name here" name="name" id="form_name" required />
+
+                <label for="form_phone"><b>Phone</b></label>
+                <input type="tel" placeholder="Type your phone number here" name="phone" id="form_phone" />
+
+                <label for="form_email"><b>Email</b></label>
+                <input type="email" placeholder="Type your email address here" name="email" id="form_email" required />
+
+                <label for="form_message"><b>Message</b></label>
+                <textarea placeholder="Type your message here" name="message" id="form_message" required rows="4"></textarea> <button type="submit" class="form-button submit-btn">SUBMIT</button> <button type="button" class="form-button cancel-btn" onclick="hideContactPopup()">CLOSE</button> </form>
+        </div>
+    </section>
+
+    <footer class="SiteFooter"> <p class="center-align">
+            &copy; Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank" rel="noopener noreferrer">The Tech Academy</a>
+            | <a href="" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </p>
+    </footer>
+
+    <script src="js/portfolio_script.js"></script>
+     </body>
+</html>
